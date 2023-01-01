@@ -32,8 +32,7 @@ for i in range (name_length):
     chant_list.append(player[0:3] +"!")
 
 #chant = (player[0:3]+"! ")* len(player[0:3]) #wrong chant
-space = " "
-chant = space.join(chant_list)
+chant = " ".join(chant_list)
 
 print(chant)
 
