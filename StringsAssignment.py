@@ -12,30 +12,24 @@ goal_1 = 54
 
 scorers = goalscorer_0 + " " +str(goal_0) + ', ' + goalscorer_1 + " " + str(goal_1)
 
-report = goalscorer_0 + " scored in the " + str(goal_0)+'nd minute' '\n' + goalscorer_1 + " scored in the " + str(goal_1)+'th minute'
+
+report = f"{goalscorer_0} scored in the {str(goal_0)}nd minute \n{goalscorer_1} scored in the {str(goal_1)}th minute "
 print(report)
 
 player = "Wim Kieft"
-first_name = player[0:3]
-
-last_name_len = len(player[player.find("Kieft"):])
+first_name = player[:player.find(" ")]
+print(first_name)
+last_name = player[player.find(" ")+1:]
+last_name_len = len(last_name)
+print(last_name)
 print(last_name_len)
 
-name_short= player[0]+'. '+ player[4:9]
+name_short= player[0]+'. '+ last_name
 
 print(name_short)
 
-chant_list =[]
-name_length = len(player[0:3])
-
-for i in range (name_length):
-    chant_list.append(player[0:3] +"!")
-
-#chant = (player[0:3]+"! ")* len(player[0:3]) #wrong chant
-chant = " ".join(chant_list)
+chant = (f'{first_name}! '*len(first_name)).strip()
 
 print(chant)
-
 good_chant = chant[-1] != " "
 print(good_chant)
-
