@@ -18,10 +18,8 @@ print(report)
 
 player = "Wim Kieft"
 first_name = player[:player.find(" ")]
-print(first_name)
 last_name = player[player.find(" ")+1:]
 last_name_len = len(last_name)
-print(last_name)
 print(last_name_len)
 
 name_short= player[0]+'. '+ last_name
